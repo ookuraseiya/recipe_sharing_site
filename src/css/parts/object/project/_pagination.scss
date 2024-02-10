@@ -1,0 +1,18 @@
+.pagination {
+  margin: 3% 0;
+  @include font18();
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__link {
+    margin: 0 1%;
+    padding: 0.5% 1%;
+    color: #fff;
+    @include background-color();
+    @include border();
+  }
+  &__position {
+  }
+}

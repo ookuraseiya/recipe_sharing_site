@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  &__container {
+    @include container();
+  }
+  &__list {
+    @include flex();
+  }
+
+  &__logo {
+    width: 9%;
+  }
+
+  &__button {
+    width: 100%;
+    @include button();
+    &--position {
+      width: 15%;
+    }
+  }
+}

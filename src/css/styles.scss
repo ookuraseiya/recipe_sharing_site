@@ -3,4 +3,18 @@
 @import './parts/foundation/base';
 @import './parts/foundation/reset';
 
-@import './parts/app';
+@import './parts/object/utility/container';
+@import './parts/object/utility/font';
+@import './parts/object/utility/responsive';
+
+// componentとlayoutが一番下
+@import './parts/object/component/border';
+@import './parts/object/component/button';
+@import './parts/object/component/color';
+@import './parts/object/component/flex';
+@import './parts/layout/header';
+@import './parts/layout/footer';
+@import './parts/object/project/card';
+@import './parts/object/project/pagination';
+@import './parts/object/project/recipe';
+@import './parts/object/project/search';

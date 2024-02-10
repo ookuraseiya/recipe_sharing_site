@@ -1,0 +1,49 @@
+.search {
+  width: 30%;
+  padding: 3%;
+  background-color: #fff;
+  @include border();
+
+  &__title {
+    text-align: center;
+    margin-bottom: 5%;
+    @include font30();
+    @include color();
+  }
+
+  &__form {
+  }
+
+  &__text {
+    width: 100%;
+    padding: 2%;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    @include border();
+    @include font16();
+  }
+
+  &__category {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+  }
+
+  &__label {
+    @include font18();
+    @include color();
+  }
+
+  &__radio {
+    margin-right: 1%;
+  }
+
+  &__button {
+    @include button();
+    width: 60%;
+    padding: 4%;
+    &--position {
+      text-align: center;
+    }
+  }
+}

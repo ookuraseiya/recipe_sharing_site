@@ -1,12 +1,17 @@
-// import { useState } from 'react';
-import { Header } from './components/common/Header';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Main } from './pages/Main';
+import { RecipeDetail } from './pages/RecipeDetail';
 import './css/styles.css';
 
 function App() {
   return (
     <>
-      <Header />
-      <h1 className="h1">Vite + React</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/recipeDetail" element={<RecipeDetail />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

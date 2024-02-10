@@ -1,0 +1,8 @@
+@mixin button {
+  padding: 6%;
+  color: #fff;
+  text-align: center;
+  @include font18();
+  @include border();
+  @include background-color();
+}

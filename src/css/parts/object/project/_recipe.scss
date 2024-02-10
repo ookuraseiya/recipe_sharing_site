@@ -1,0 +1,43 @@
+.recipe {
+  margin-bottom: 3%;
+  &__heading {
+    text-align: center;
+    margin: 5% 0;
+  }
+
+  &__title {
+    font-weight: bold;
+    @include color();
+    @include font42();
+  }
+
+  &__lead {
+    font-weight: bold;
+    @include sub__color();
+    @include font26();
+  }
+
+  &__container {
+    @include container();
+  }
+
+  &__wrapper {
+    @include flex();
+    align-items: flex-start;
+  }
+
+  &__list {
+    width: 65%;
+    &--wrapper {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      @include flex();
+      &::after {
+        content: '';
+        display: block;
+        width: 30%;
+      }
+    }
+  }
+}

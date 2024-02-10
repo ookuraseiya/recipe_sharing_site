@@ -1,0 +1,9 @@
+.footer {
+  padding: 2% 0;
+  @include background-color();
+  &__lead {
+    text-align: center;
+    color: #fff;
+    @include font16();
+  }
+}
