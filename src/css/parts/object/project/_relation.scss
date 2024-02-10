@@ -1,0 +1,10 @@
+.relation {
+  width: 30%;
+  padding: 3%;
+  @include border();
+  &__title {
+    text-align: center;
+    @include color();
+    @include font26();
+  }
+}

@@ -1,8 +1,29 @@
+import { useEffect, useState } from 'react';
 import { Card } from './Card';
-import { Pagination } from '../utility/navigation/Pagination';
-import { Search } from '../utility/search/Serch';
+import { Pagination } from '../utility/Pagination';
+import { Search } from '../utility/Serch';
 
 export const Recipe = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      `${String(import.meta.env.VITE_MICROCMS_DOMAIN)}${String(
+        import.meta.env.VITE_MICROCMS_ENDPOINT
+      )}`,
+      {
+        headers: {
+          'X-API-KEY': String(import.meta.env.VITE_MICROCMS_API_KEY),
+        },
+        method: 'GET',
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setPosts(data.contents);
+      });
+  }, []);
+
   return (
     <>
       <section className="recipe">
@@ -14,11 +35,7 @@ export const Recipe = () => {
           <div className="recipe__wrapper">
             <div className="recipe__list">
               <ul className="recipe__list--wrapper">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <Card posts={posts} />
               </ul>
               <Pagination />
             </div>

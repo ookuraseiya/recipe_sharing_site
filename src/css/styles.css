@@ -600,6 +600,240 @@ template {
   width: 30%;
 }
 
+.recipeDetail__container {
+  margin: 0 10%;
+}
+.recipeDetail__title {
+  text-align: center;
+  font-weight: bold;
+  margin: 5% 0;
+  font-size: 4.2em;
+  color: #5a320a;
+}
+.recipeDetail__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+}
+.recipeDetail__description {
+  width: 65%;
+  margin-bottom: 3%;
+}
+.recipeDetail__description--button {
+  padding: 6%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8em;
+  border-radius: 10px;
+  border: 1px solid #5a320a;
+  background-color: #5a320a;
+  width: 30%;
+  padding: 2%;
+  margin-top: 3%;
+}
+.recipeDetail__description--button--position {
+  text-align: center;
+}
+.recipeDetail__item {
+  width: 100%;
+}
+.recipeDetail__item--image {
+  width: 100%;
+  margin-bottom: 4%;
+}
+.recipeDetail__item--title {
+  color: #5a320a;
+  font-size: 3.6em;
+}
+.recipeDetail__item--postTime {
+  font-size: 2em;
+  margin: 2% 0;
+}
+.recipeDetail__item--postTime--span {
+  margin-left: 1%;
+}
+.recipeDetail__item--category {
+  margin: 2% 0;
+  font-size: 2em;
+}
+.recipeDetail__item--category--span {
+  margin-left: 1%;
+  padding: 0.5% 1%;
+  border-radius: 10px;
+  border: 1px solid #5a320a;
+  color: #5a320a;
+}
+.recipeDetail__item--duration {
+  font-size: 2em;
+  margin: 2% 0;
+}
+.recipeDetail__item--duration--span {
+  margin-left: 1%;
+}
+
+.richEditor {
+  padding-bottom: 5%;
+  border-bottom: 2px solid #e8e8e8;
+}
+.richEditor .fontStyle__h3, .richEditor th h3, .richEditor h3 {
+  font-size: 2.2em;
+}
+@media screen and (max-width: 576px) {
+  .richEditor .fontStyle__h3, .richEditor th h3, .richEditor h3 {
+    font-size: 1.8em;
+  }
+}
+.richEditor .fontStyle__p, .richEditor th p, .richEditor p {
+  font-weight: normal;
+  font-size: 1.8em;
+}
+@media screen and (max-width: 576px) {
+  .richEditor .fontStyle__p, .richEditor th p, .richEditor p {
+    font-size: 1.6em;
+  }
+}
+.richEditor h1 {
+  border-left: 6px solid #aa8d3e;
+  border-bottom: 1px solid #aa8d3e;
+  padding: 0.5rem 0.75rem;
+  color: #aa8d3f;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2.8em;
+}
+@media screen and (max-width: 576px) {
+  .richEditor h1 {
+    font-size: 2em;
+  }
+}
+.richEditor h3 {
+  width: 100%;
+  margin: 2% 0;
+}
+.richEditor p {
+  margin: 4% 0;
+}
+.richEditor__emphasis {
+  color: #d12e2e;
+  font-weight: bolder;
+}
+.richEditor ul {
+  margin: 5% 0;
+}
+.richEditor ol {
+  margin-bottom: 5%;
+}
+.richEditor li {
+  padding: 10px 0;
+  border-bottom: 1px solid #aa8d3e;
+  display: flex;
+  font-size: 1.6em;
+}
+.richEditor table img {
+  width: 520px;
+  height: 450px;
+}
+@media screen and (max-width: 1500px) {
+  .richEditor table img {
+    width: 370px;
+    height: 380px;
+  }
+}
+@media screen and (max-width: 1500px) and (max-width: 1300px) {
+  .richEditor table img {
+    width: 330px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) {
+  .richEditor table img {
+    width: 300px;
+    height: 320px;
+  }
+}
+@media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) and (max-width: 1024px) {
+  .richEditor table img {
+    margin: 5% 0;
+    width: 100vh;
+  }
+}
+.richEditor table {
+  width: 100%;
+}
+.richEditor tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .richEditor tr {
+    flex-direction: column;
+  }
+}
+.richEditor th h3 {
+  width: 520px;
+  margin-top: 1%;
+  padding-bottom: 4%;
+}
+@media screen and (max-width: 1500px) {
+  .richEditor th h3 {
+    width: 370px;
+  }
+}
+@media screen and (max-width: 1500px) and (max-width: 1300px) {
+  .richEditor th h3 {
+    width: 330px;
+  }
+}
+@media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) {
+  .richEditor th h3 {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) and (max-width: 1024px) {
+  .richEditor th h3 {
+    width: 100%;
+  }
+}
+.richEditor th p {
+  width: 520px;
+}
+@media screen and (max-width: 1500px) {
+  .richEditor th p {
+    width: 370px;
+  }
+}
+@media screen and (max-width: 1500px) and (max-width: 1300px) {
+  .richEditor th p {
+    width: 330px;
+  }
+}
+@media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) {
+  .richEditor th p {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) and (max-width: 1024px) {
+  .richEditor th p {
+    width: 100%;
+  }
+}
+
+.relation {
+  width: 30%;
+  padding: 3%;
+  border-radius: 10px;
+  border: 1px solid #5a320a;
+}
+.relation__title {
+  text-align: center;
+  color: #5a320a;
+  font-size: 2.6em;
+}
+
 .search {
   width: 30%;
   padding: 3%;

@@ -1,0 +1,203 @@
+.recipeDetail {
+  &__container {
+    @include container();
+  }
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    margin: 5% 0;
+    @include font42();
+    @include color();
+  }
+  &__wrapper {
+    @include flex();
+    align-items: flex-start;
+  }
+  &__description {
+    width: 65%;
+    margin-bottom: 3%;
+    &--button {
+      @include button();
+      width: 30%;
+      padding: 2%;
+      margin-top: 3%;
+      &--position {
+        text-align: center;
+      }
+    }
+  }
+  &__item {
+    width: 100%;
+    &--image {
+      width: 100%;
+      margin-bottom: 4%;
+    }
+
+    &--title {
+      @include color();
+      @include font36();
+    }
+
+    &--postTime {
+      @include font20();
+      margin: 2% 0;
+      &--span {
+        margin-left: 1%;
+      }
+    }
+
+    &--category {
+      margin: 2% 0;
+      @include font20();
+      &--span {
+        margin-left: 1%;
+        padding: 0.5% 1%;
+        @include border();
+        @include color();
+      }
+    }
+
+    &--duration {
+      @include font20();
+      margin: 2% 0;
+      &--span {
+        margin-left: 1%;
+      }
+    }
+  }
+}
+
+.richEditor {
+  padding-bottom: 5%;
+  border-bottom: 2px solid #e8e8e8;
+  .fontStyle__h3 {
+    @include font22();
+    @include responsive(sm) {
+      @include font18();
+    }
+  }
+
+  .fontStyle__p {
+    font-weight: normal;
+    @include font18();
+    @include responsive(sm) {
+      @include font16();
+    }
+  }
+
+  h1 {
+    border-left: 6px solid #aa8d3e;
+    border-bottom: 1px solid #aa8d3e;
+    padding: 0.5rem 0.75rem;
+    color: #aa8d3f;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    @include font28();
+    @include responsive(sm) {
+      @include font20();
+    }
+  }
+
+  h3 {
+    width: 100%;
+    margin: 2% 0;
+    @extend .fontStyle__h3;
+  }
+
+  p {
+    margin: 4% 0;
+    @extend .fontStyle__p;
+  }
+
+  &__emphasis {
+    color: #d12e2e;
+    font-weight: bolder;
+  }
+
+  ul {
+    margin: 5% 0;
+  }
+
+  ol {
+    margin-bottom: 5%;
+  }
+
+  li {
+    padding: 10px 0;
+    border-bottom: 1px solid #aa8d3e;
+    display: flex;
+    font-size: 1.6em;
+  }
+
+  table img {
+    width: 520px;
+    height: 450px;
+    @include responsive(xxxxxl) {
+      width: 370px;
+      height: 380px;
+      @include responsive(xxxl) {
+        width: 330px;
+        height: 350px;
+        @include responsive(xxl) {
+          width: 300px;
+          height: 320px;
+          @include responsive(xl) {
+            margin: 5% 0;
+            width: 100vh;
+          }
+        }
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+
+  tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include responsive(xl) {
+      flex-direction: column;
+    }
+  }
+
+  th h3 {
+    width: 520px;
+    margin-top: 1%;
+    padding-bottom: 4%;
+    @extend .fontStyle__h3;
+    @include responsive(xxxxxl) {
+      width: 370px;
+      @include responsive(xxxl) {
+        width: 330px;
+        @include responsive(xxl) {
+          width: 300px;
+          @include responsive(xl) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  th p {
+    width: 520px;
+    @extend .fontStyle__p;
+    @include responsive(xxxxxl) {
+      width: 370px;
+      @include responsive(xxxl) {
+        width: 330px;
+        @include responsive(xxl) {
+          width: 300px;
+          @include responsive(xl) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
