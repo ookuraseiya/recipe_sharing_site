@@ -7,12 +7,27 @@
     align-items: center;
   }
   &__link {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+    height: 2.5em;
     margin: 0 1%;
-    padding: 0.5% 1%;
     color: #fff;
     @include background-color();
     @include border();
   }
-  &__position {
+
+  &__href {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__disabled {
+    display: none;
   }
 }

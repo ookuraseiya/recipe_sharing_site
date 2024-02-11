@@ -1,32 +1,16 @@
 import Moment from 'moment';
 import { Link } from 'react-router-dom';
+import { RecipeType } from '../utility/type/RecipeType';
 
-type Image = {
-  url: string;
-  height: number;
-  width: number;
-};
-
-type Recipe = {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
-  name: string;
-  image: Image;
-  duration: number;
-  category: string;
-};
-
-interface CardType {
-  posts: Recipe[];
+interface RecipePostType extends RecipeType {
+  firstPost: number;
+  lastPost: number;
 }
 
-export const Card = ({ posts }: CardType) => {
+export const Card = ({ posts, firstPost, lastPost }: RecipePostType) => {
   return (
     <>
-      {posts.map((post) => (
+      {posts.slice(firstPost, lastPost).map((post) => (
         <Link className="card" key={post.id} to={`/recipeDetail/${post.id}`}>
           <li>
             <img

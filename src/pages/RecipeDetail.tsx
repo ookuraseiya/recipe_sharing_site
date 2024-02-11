@@ -4,29 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import { Footer } from '../components/common/Footer';
 import { Header } from '../components/common/Header';
 import { Relation } from '../components/common/Relation';
-
-type Image = {
-  url: string;
-  height: number;
-  width: number;
-};
-
-type Recipe = {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
-  name: string;
-  image: Image;
-  duration: number;
-  category: string;
-  description: string;
-};
-
-interface RecipeType {
-  posts: Recipe[];
-}
+import { Recipe } from '../components/utility/type/RecipeType';
 
 export const RecipeDetail = () => {
   const [posts, setPosts] = useState<Recipe[]>([]);
