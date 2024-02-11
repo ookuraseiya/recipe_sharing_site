@@ -29,8 +29,8 @@ export const Recipe = () => {
       <section className="recipe">
         <div className="recipe__container">
           <div className="recipe__heading">
-            <h1 className="recipe__title">大倉家のレシピ共有サイト</h1>
-            <p className="recipe__lead">オンマの飯しか勝たん</p>
+            <h1 className="recipe__title">大倉家のレシピ共有アプリ</h1>
+            <p className="recipe__lead">オンマの飯しか勝たん💛</p>
           </div>
           <div className="recipe__wrapper">
             <div className="recipe__list">

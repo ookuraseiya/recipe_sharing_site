@@ -4,7 +4,7 @@ export const Header = () => {
       <header className="header">
         <div className="header__container">
           <div className="header__list">
-            <img className="header__logo" src={'images/logo.webp'} alt="" />
+            <img className="header__logo" src={'/images/logo.webp'} alt="" />
             <div className="header__button--position">
               <button className="header__button">ログアウト</button>
             </div>

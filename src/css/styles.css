@@ -593,6 +593,7 @@ template {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-items: normal;
 }
 .recipe__list--wrapper::after {
   content: "";
@@ -672,152 +673,153 @@ template {
   margin-left: 1%;
 }
 
-.richEditor {
+.description {
   padding-bottom: 5%;
   border-bottom: 2px solid #e8e8e8;
 }
-.richEditor .fontStyle__h3, .richEditor th h3, .richEditor h3 {
+.description .fontStyle__h3, .description th h3, .description h3 {
   font-size: 2.2em;
 }
 @media screen and (max-width: 576px) {
-  .richEditor .fontStyle__h3, .richEditor th h3, .richEditor h3 {
+  .description .fontStyle__h3, .description th h3, .description h3 {
     font-size: 1.8em;
   }
 }
-.richEditor .fontStyle__p, .richEditor th p, .richEditor p {
+.description .fontStyle__p, .description th p, .description p {
   font-weight: normal;
   font-size: 1.8em;
 }
 @media screen and (max-width: 576px) {
-  .richEditor .fontStyle__p, .richEditor th p, .richEditor p {
+  .description .fontStyle__p, .description th p, .description p {
     font-size: 1.6em;
   }
 }
-.richEditor h1 {
-  border-left: 6px solid #aa8d3e;
-  border-bottom: 1px solid #aa8d3e;
+.description h1 {
   padding: 0.5rem 0.75rem;
-  color: #aa8d3f;
   font-weight: bold;
   line-height: 1;
   margin-top: 3rem;
   margin-bottom: 2rem;
+  color: #5a320a;
   font-size: 2.8em;
+  border-left: 6px solid;
+  border-bottom: 1px solid;
 }
 @media screen and (max-width: 576px) {
-  .richEditor h1 {
+  .description h1 {
     font-size: 2em;
   }
 }
-.richEditor h3 {
+.description h3 {
   width: 100%;
   margin: 2% 0;
 }
-.richEditor p {
+.description p {
   margin: 4% 0;
 }
-.richEditor__emphasis {
+.description__emphasis {
   color: #d12e2e;
   font-weight: bolder;
 }
-.richEditor ul {
+.description ul {
   margin: 5% 0;
 }
-.richEditor ol {
+.description ol {
   margin-bottom: 5%;
 }
-.richEditor li {
+.description li {
   padding: 10px 0;
-  border-bottom: 1px solid #aa8d3e;
+  color: #5a320a;
+  border-bottom: 1px solid;
   display: flex;
   font-size: 1.6em;
 }
-.richEditor table img {
+.description table img {
   width: 520px;
   height: 450px;
 }
 @media screen and (max-width: 1500px) {
-  .richEditor table img {
+  .description table img {
     width: 370px;
     height: 380px;
   }
 }
 @media screen and (max-width: 1500px) and (max-width: 1300px) {
-  .richEditor table img {
+  .description table img {
     width: 330px;
     height: 350px;
   }
 }
 @media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) {
-  .richEditor table img {
+  .description table img {
     width: 300px;
     height: 320px;
   }
 }
 @media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) and (max-width: 1024px) {
-  .richEditor table img {
+  .description table img {
     margin: 5% 0;
     width: 100vh;
   }
 }
-.richEditor table {
+.description table {
   width: 100%;
 }
-.richEditor tr {
+.description tr {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media screen and (max-width: 1024px) {
-  .richEditor tr {
+  .description tr {
     flex-direction: column;
   }
 }
-.richEditor th h3 {
+.description th h3 {
   width: 520px;
   margin-top: 1%;
   padding-bottom: 4%;
 }
 @media screen and (max-width: 1500px) {
-  .richEditor th h3 {
+  .description th h3 {
     width: 370px;
   }
 }
 @media screen and (max-width: 1500px) and (max-width: 1300px) {
-  .richEditor th h3 {
+  .description th h3 {
     width: 330px;
   }
 }
 @media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) {
-  .richEditor th h3 {
+  .description th h3 {
     width: 300px;
   }
 }
 @media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) and (max-width: 1024px) {
-  .richEditor th h3 {
+  .description th h3 {
     width: 100%;
   }
 }
-.richEditor th p {
+.description th p {
   width: 520px;
 }
 @media screen and (max-width: 1500px) {
-  .richEditor th p {
+  .description th p {
     width: 370px;
   }
 }
 @media screen and (max-width: 1500px) and (max-width: 1300px) {
-  .richEditor th p {
+  .description th p {
     width: 330px;
   }
 }
 @media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) {
-  .richEditor th p {
+  .description th p {
     width: 300px;
   }
 }
 @media screen and (max-width: 1500px) and (max-width: 1300px) and (max-width: 1200px) and (max-width: 1024px) {
-  .richEditor th p {
+  .description th p {
     width: 100%;
   }
 }

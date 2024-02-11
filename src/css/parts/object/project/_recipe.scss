@@ -33,6 +33,7 @@
       flex-wrap: wrap;
       justify-content: flex-start;
       @include flex();
+      align-items: normal;
       &::after {
         content: '';
         display: block;

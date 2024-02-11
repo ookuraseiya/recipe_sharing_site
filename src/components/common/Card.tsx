@@ -1,4 +1,3 @@
-import React from 'react';
 import Moment from 'moment';
 import { Link } from 'react-router-dom';
 
@@ -25,7 +24,6 @@ interface CardType {
 }
 
 export const Card = ({ posts }: CardType) => {
-  console.log(posts);
   return (
     <>
       {posts.map((post) => (

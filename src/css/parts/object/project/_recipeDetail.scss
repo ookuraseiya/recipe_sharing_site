@@ -67,7 +67,7 @@
   }
 }
 
-.richEditor {
+.description {
   padding-bottom: 5%;
   border-bottom: 2px solid #e8e8e8;
   .fontStyle__h3 {
@@ -86,15 +86,15 @@
   }
 
   h1 {
-    border-left: 6px solid #aa8d3e;
-    border-bottom: 1px solid #aa8d3e;
     padding: 0.5rem 0.75rem;
-    color: #aa8d3f;
     font-weight: bold;
     line-height: 1;
     margin-top: 3rem;
     margin-bottom: 2rem;
+    @include color();
     @include font28();
+    border-left: 6px solid;
+    border-bottom: 1px solid;
     @include responsive(sm) {
       @include font20();
     }
@@ -126,7 +126,8 @@
 
   li {
     padding: 10px 0;
-    border-bottom: 1px solid #aa8d3e;
+    @include color();
+    border-bottom: 1px solid;
     display: flex;
     font-size: 1.6em;
   }
