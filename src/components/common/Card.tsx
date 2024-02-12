@@ -2,24 +2,19 @@ import Moment from 'moment';
 import { Link } from 'react-router-dom';
 import { RecipeType } from '../utility/type/RecipeType';
 
-interface RecipePostsType {
-  posts: RecipeType[];
-}
-
-interface RecipePostType extends RecipePostsType {
-  firstPost?: number;
-  lastPost?: number;
-  recipeId?: string;
-  relationCategory?: string;
-}
-
 export const Card = ({
   posts,
   firstPost,
   lastPost,
   recipeId,
   relationCategory,
-}: RecipePostType) => {
+}: {
+  posts: RecipeType[];
+  firstPost?: number;
+  lastPost?: number;
+  recipeId?: string;
+  relationCategory?: string;
+}) => {
   return (
     <>
       {firstPost !== undefined &&
