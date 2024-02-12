@@ -4,7 +4,7 @@ type Image = {
   width: number;
 };
 
-export type Recipe = {
+export type RecipeType = {
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -16,7 +16,3 @@ export type Recipe = {
   category: string;
   description: string;
 };
-
-export interface RecipeType {
-  posts: Recipe[];
-}

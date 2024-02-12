@@ -40,5 +40,15 @@
         width: 30%;
       }
     }
+
+    &--error {
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      @include color();
+      @include font32();
+    }
   }
 }

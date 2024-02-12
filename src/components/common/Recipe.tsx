@@ -1,13 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Card } from './Card';
-import { Pagination } from '../utility/Pagination';
 import { Search } from '../utility/Serch';
-import { useParams } from 'react-router-dom';
+import { RecipeList } from './RecipeList';
+import { RecipeType } from '../utility/type/RecipeType';
 
 export const Recipe = () => {
-  let { pageId } = useParams();
-  const [posts, setPosts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [posts, setPosts] = useState<RecipeType[]>([]);
 
   useEffect(() => {
     fetch(
@@ -27,16 +24,6 @@ export const Recipe = () => {
       });
   }, []);
 
-  useEffect(() => {
-    setCurrentPage(Number(pageId));
-  }, [pageId]);
-
-  const PER_PAGE: number = 9;
-  const lastPost: number = currentPage * PER_PAGE;
-  const firstPost: number = lastPost - PER_PAGE;
-  const totalPosts: number = posts.length;
-  const paginationNumber: number = Math.ceil(totalPosts / PER_PAGE);
-
   return (
     <>
       <section className="recipe">
@@ -46,17 +33,8 @@ export const Recipe = () => {
             <p className="recipe__lead">オンマの飯しか勝たん💛</p>
           </div>
           <div className="recipe__wrapper">
-            <div className="recipe__list">
-              <ul className="recipe__list--wrapper">
-                <Card posts={posts} firstPost={firstPost} lastPost={lastPost} />
-              </ul>
-              <Pagination
-                pageId={Number(pageId)}
-                currentPage={currentPage}
-                paginationNumber={paginationNumber}
-              />
-            </div>
-            <Search />
+            <RecipeList posts={posts} />
+            <Search setPosts={setPosts} />
           </div>
         </div>
       </section>

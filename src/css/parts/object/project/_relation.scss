@@ -1,10 +1,15 @@
 .relation {
-  width: 30%;
   padding: 3%;
+  width: 30%;
   @include border();
   &__title {
+    margin-bottom: 6%;
     text-align: center;
+    font-weight: bold;
     @include color();
     @include font26();
+  }
+
+  &__wrapper {
   }
 }

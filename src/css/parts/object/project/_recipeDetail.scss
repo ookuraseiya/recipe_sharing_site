@@ -10,6 +10,7 @@
     @include color();
   }
   &__wrapper {
+    margin-bottom: 5%;
     @include flex();
     align-items: flex-start;
   }

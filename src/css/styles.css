@@ -77,7 +77,8 @@ h6 {
 /* Lists (enumeration) */
 /* ============================================ */
 ul,
-ol {
+ol,
+li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -498,7 +499,11 @@ template {
 
 .card {
   width: 30%;
-  margin-bottom: 3%;
+}
+.card__layout {
+  width: 100%;
+  height: 90%;
+  margin-bottom: 12%;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
@@ -616,6 +621,15 @@ template {
   display: block;
   width: 30%;
 }
+.recipe__list--error {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #5a320a;
+  font-size: 3.2em;
+}
 
 .recipeDetail__container {
   margin: 0 10%;
@@ -628,6 +642,7 @@ template {
   color: #5a320a;
 }
 .recipeDetail__wrapper {
+  margin-bottom: 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -841,17 +856,18 @@ template {
 }
 
 .relation {
-  width: 30%;
   padding: 3%;
+  width: 30%;
   border-radius: 10px;
   border: 1px solid #5a320a;
 }
 .relation__title {
+  margin-bottom: 6%;
   text-align: center;
+  font-weight: bold;
   color: #5a320a;
   font-size: 2.6em;
 }
-
 .search {
   width: 30%;
   padding: 3%;

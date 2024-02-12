@@ -4,10 +4,10 @@ import { Link, useParams } from 'react-router-dom';
 import { Footer } from '../components/common/Footer';
 import { Header } from '../components/common/Header';
 import { Relation } from '../components/common/Relation';
-import { Recipe } from '../components/utility/type/RecipeType';
+import { RecipeType } from '../components/utility/type/RecipeType';
 
 export const RecipeDetail = () => {
-  const [posts, setPosts] = useState<Recipe[]>([]);
+  const [posts, setPosts] = useState<RecipeType[]>([]);
   const { recipeId } = useParams();
 
   useEffect(() => {
@@ -31,8 +31,6 @@ export const RecipeDetail = () => {
         );
       });
   }, [recipeId]);
-
-  console.log(posts);
 
   return (
     <>
@@ -76,14 +74,14 @@ export const RecipeDetail = () => {
                   </div>
                 </div>
                 <div className="recipeDetail__description--button--position">
-                  <Link to="/">
+                  <Link to="/1">
                     <button className="recipeDetail__description--button">
                       レシピ一覧に戻る
                     </button>
                   </Link>
                 </div>
               </div>
-              <Relation />
+              <Relation recipeId={post.id} relationCategory={post.category} />
             </div>
           </div>
         </section>
