@@ -8,15 +8,33 @@
     margin: 5% 0;
     @include font42();
     @include color();
+    @include responsive(xl) {
+      @include font32();
+      @include responsive(sm) {
+        margin: 10% 0;
+        font-weight: bold;
+        @include font22();
+      }
+    }
   }
   &__wrapper {
     margin-bottom: 5%;
     @include flex();
     align-items: flex-start;
+    @include responsive(xl) {
+      display: block;
+    }
   }
   &__description {
     width: 65%;
     margin-bottom: 3%;
+    @include responsive(xl) {
+      width: 100%;
+      margin-bottom: 6%;
+      @include responsive(lg) {
+        margin-bottom: 10%;
+      }
+    }
     &--button {
       @include button();
       width: 30%;
@@ -24,6 +42,15 @@
       margin-top: 3%;
       &--position {
         text-align: center;
+      }
+      @include responsive(lg) {
+        padding: 3%;
+        width: 50%;
+        @include responsive(sm) {
+          margin-top: 6%;
+          padding: 5%;
+          width: 80%;
+        }
       }
     }
   }
@@ -37,11 +64,18 @@
     &--title {
       @include color();
       @include font36();
+      @include responsive(sm) {
+        @include font26();
+      }
     }
 
     &--postTime {
       @include font20();
       margin: 2% 0;
+      @include responsive(sm) {
+        @include font18();
+        margin: 5% 0;
+      }
       &--span {
         margin-left: 1%;
       }
@@ -50,6 +84,9 @@
     &--category {
       margin: 2% 0;
       @include font20();
+      @include responsive(sm) {
+        @include font18();
+      }
       &--span {
         margin-left: 1%;
         padding: 0.5% 1%;
@@ -60,6 +97,9 @@
 
     &--duration {
       @include font20();
+      @include responsive(sm) {
+        @include font18();
+      }
       margin: 2% 0;
       &--span {
         margin-left: 1%;

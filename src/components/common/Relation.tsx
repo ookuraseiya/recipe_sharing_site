@@ -13,10 +13,10 @@ export const Relation = ({
   return (
     <>
       <section className="relation">
-        <h1 className="relation__title">
-          {relationCategory}に関連するその他の料理
-        </h1>
         <div className="relation__wrapper">
+          <h1 className="relation__title">
+            {relationCategory}に関連するその他の料理
+          </h1>
           <Card
             posts={relationPosts}
             recipeId={recipeId}

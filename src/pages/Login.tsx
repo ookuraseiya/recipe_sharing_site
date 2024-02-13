@@ -15,7 +15,7 @@ export const Login = () => {
       navigate('/1');
     } catch (error: unknown) {
       if (error instanceof Error) {
-        setLoginError(error.message);
+        setLoginError('メールアドレスかパスワードが違います。');
       }
     }
   };

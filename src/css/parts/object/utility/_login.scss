@@ -10,6 +10,13 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 2%;
     width: 30%;
+    @include responsive(xl) {
+      width: 50%;
+      padding: 5%;
+      @include responsive(sm) {
+        width: 80%;
+      }
+    }
   }
 
   &__error {

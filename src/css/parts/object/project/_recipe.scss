@@ -3,18 +3,33 @@
   &__heading {
     text-align: center;
     margin: 5% 0;
+    @include responsive(sm) {
+      margin: 10% 0;
+    }
   }
 
   &__title {
     font-weight: bold;
     @include color();
     @include font42();
+    @include responsive(lg) {
+      @include font34();
+      @include responsive(sm) {
+        @include font24();
+      }
+    }
   }
 
   &__lead {
     font-weight: bold;
     @include sub__color();
     @include font26();
+    @include responsive(lg) {
+      @include font22();
+      @include responsive(sm) {
+        @include font18();
+      }
+    }
   }
 
   &__container {
@@ -24,10 +39,19 @@
   &__wrapper {
     @include flex();
     align-items: flex-start;
+    @include responsive(lg) {
+      display: block;
+    }
   }
 
   &__list {
     width: 65%;
+    @include responsive(lg) {
+      width: 100%;
+      @include responsive(lg) {
+        margin-bottom: 8%;
+      }
+    }
     &--wrapper {
       width: 100%;
       flex-wrap: wrap;
@@ -38,6 +62,9 @@
         content: '';
         display: block;
         width: 30%;
+      }
+      @include responsive(sm) {
+        display: block;
       }
     }
 

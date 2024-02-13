@@ -17,6 +17,9 @@
     color: #fff;
     @include background-color();
     @include border();
+    @include responsive(xl) {
+      margin: 0 2%;
+    }
   }
 
   &__href {

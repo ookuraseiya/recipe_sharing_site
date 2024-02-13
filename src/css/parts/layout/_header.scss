@@ -11,6 +11,15 @@
 
   &__logo {
     width: 9%;
+    @include responsive(xl) {
+      width: 16%;
+      @include responsive(lg) {
+        width: 24%;
+        @include responsive(sm) {
+          width: 33%;
+        }
+      }
+    }
   }
 
   &__button {
@@ -18,6 +27,15 @@
     @include button();
     &--position {
       width: 15%;
+      @include responsive(xl) {
+        width: 20%;
+        @include responsive(lg) {
+          width: 33%;
+          @include responsive(sm) {
+            width: 45%;
+          }
+        }
+      }
     }
   }
 }

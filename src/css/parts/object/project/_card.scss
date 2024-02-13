@@ -1,5 +1,8 @@
 .card {
   width: 30%;
+  @include responsive(xl) {
+    width: 47%;
+  }
 
   &__layout {
     width: 100%;
@@ -15,6 +18,9 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
+    @include responsive(xl) {
+      height: 150px;
+    }
   }
 
   &__content {

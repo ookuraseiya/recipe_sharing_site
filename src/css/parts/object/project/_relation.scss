@@ -2,14 +2,22 @@
   padding: 3%;
   width: 30%;
   @include border();
+  @include responsive(xl) {
+    width: 60%;
+    margin: auto;
+    @include responsive(lg) {
+      width: 75%;
+      @include responsive(sm) {
+        width: 100%;
+        padding: 6%;
+      }
+    }
+  }
   &__title {
     margin-bottom: 6%;
     text-align: center;
     font-weight: bold;
     @include color();
     @include font26();
-  }
-
-  &__wrapper {
   }
 }

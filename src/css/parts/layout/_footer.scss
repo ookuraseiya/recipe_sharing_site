@@ -1,6 +1,12 @@
 .footer {
   padding: 2% 0;
   @include background-color();
+  @include responsive(sm) {
+    padding: 5% 0;
+  }
+  &__wrapper {
+    @include container();
+  }
   &__lead {
     text-align: center;
     color: #fff;
