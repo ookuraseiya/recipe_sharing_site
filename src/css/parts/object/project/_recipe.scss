@@ -76,6 +76,9 @@
       font-weight: bold;
       @include color();
       @include font32();
+      @include responsive(sm) {
+        @include font26();
+      }
     }
   }
 }

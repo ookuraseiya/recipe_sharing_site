@@ -542,6 +542,77 @@ template {
   font-size: 1.6em;
 }
 
+.notFound {
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1024px) {
+  .notFound {
+    height: 90vh;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 992px) {
+  .notFound {
+    height: 1000px;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 992px) and (max-width: 768px) {
+  .notFound {
+    height: 900px;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 992px) and (max-width: 768px) and (max-width: 576px) {
+  .notFound {
+    height: 750px;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 992px) and (max-width: 768px) and (max-width: 576px) and (max-width: 375px) {
+  .notFound {
+    height: 550px;
+  }
+}
+.notFound__container {
+  margin: 0 10%;
+}
+.notFound__title {
+  text-align: center;
+  font-weight: bold;
+  margin: 8% 0;
+  color: #5a320a;
+  font-size: 4.2em;
+}
+@media screen and (max-width: 576px) {
+  .notFound__title {
+    font-size: 3.2em;
+  }
+}
+@media screen and (max-width: 576px) and (max-width: 375px) {
+  .notFound__title {
+    font-size: 2.8em;
+  }
+}
+.notFound__button {
+  width: 60%;
+  padding: 6%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8em;
+  border-radius: 10px;
+  border: 1px solid #5a320a;
+  background-color: #5a320a;
+}
+@media screen and (max-width: 576px) {
+  .notFound__button {
+    width: 80%;
+  }
+}
+.notFound__button--position {
+  width: 100%;
+  text-align: center;
+}
+
 .card {
   width: 30%;
 }
@@ -734,6 +805,11 @@ template {
   font-weight: bold;
   color: #5a320a;
   font-size: 3.2em;
+}
+@media screen and (max-width: 576px) {
+  .recipe__list--error {
+    font-size: 2.6em;
+  }
 }
 
 .recipeDetail__container {

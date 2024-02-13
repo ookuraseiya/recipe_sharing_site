@@ -1,0 +1,50 @@
+.notFound {
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include responsive(xl) {
+    height: 90vh;
+    @include responsive(lg) {
+      height: 1000px;
+      @include responsive(md) {
+        height: 900px;
+        @include responsive(sm) {
+          height: 750px;
+          @include responsive(xs) {
+            height: 550px;
+          }
+        }
+      }
+    }
+  }
+  &__container {
+    @include container();
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    margin: 8% 0;
+    @include color();
+    @include font42();
+    @include responsive(sm) {
+      @include font32();
+      @include responsive(xs) {
+        @include font28();
+      }
+    }
+  }
+
+  &__button {
+    width: 60%;
+    @include button();
+    @include responsive(sm) {
+      width: 80%;
+    }
+    &--position {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

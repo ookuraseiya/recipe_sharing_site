@@ -7,6 +7,7 @@ import { AuthProvider } from './contexts/AuthProvider';
 import { UnLoginRedirect } from './components/utility/redirect/UnLoginRedirect';
 import { LoginRedirect } from './components/utility/redirect/LoginRedirect';
 import { InitialRedirect } from './components/utility/redirect/InitialRedirect';
+import { NotFoundPage } from './pages/404';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
                 </UnLoginRedirect>
               }
             />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>

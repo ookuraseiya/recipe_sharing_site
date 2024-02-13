@@ -5,6 +5,7 @@ import { Relation } from '../components/common/Relation';
 import { RecipeType } from '../components/utility/type/RecipeType';
 import { Loading } from '../components/animetions/Loading';
 import { FadeIn } from '../components/animetions/FadeIn';
+import { NotFoundPage } from './404';
 
 export const RecipeDetail = () => {
   const [posts, setPosts] = useState<RecipeType[]>([]);
@@ -36,11 +37,19 @@ export const RecipeDetail = () => {
       });
   }, [recipeId]);
 
+  const judge = (posts: RecipeType[]) => {
+    if (posts.length === 0) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   return (
     <>
       {loading ? (
         <Loading />
-      ) : (
+      ) : judge(posts) ? (
         <>
           <FadeIn>
             {posts.map((post) => (
@@ -106,6 +115,8 @@ export const RecipeDetail = () => {
             ))}
           </FadeIn>
         </>
+      ) : (
+        <NotFoundPage />
       )}
     </>
   );

@@ -22,8 +22,12 @@ export const RecipeList = ({ posts }: RecipePostsType) => {
   const totalPosts: number = posts.length;
   const paginationNumber: number = Math.ceil(totalPosts / PER_PAGE);
 
-  const judge = (posts: RecipeType[]) => {
-    if (posts.length === 0) {
+  const judge = () => {
+    if (
+      1 > Number(pageId) ||
+      paginationNumber < Number(pageId) ||
+      isNaN(Number(pageId))
+    ) {
       return false;
     } else {
       return true;
@@ -33,7 +37,7 @@ export const RecipeList = ({ posts }: RecipePostsType) => {
   return (
     <>
       <div className="recipe__list">
-        {judge(posts) ? (
+        {judge() ? (
           <>
             <ul className="recipe__list--wrapper">
               <Card posts={posts} firstPost={firstPost} lastPost={lastPost} />
