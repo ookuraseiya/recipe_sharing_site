@@ -6,6 +6,7 @@ import { Login } from './pages/Login';
 import { AuthProvider } from './contexts/AuthProvider';
 import { UnLoginRedirect } from './components/utility/redirect/UnLoginRedirect';
 import { LoginRedirect } from './components/utility/redirect/LoginRedirect';
+import { InitialRedirect } from './components/utility/redirect/InitialRedirect';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Routes>
+            <Route path="/" element={<InitialRedirect />} />
             <Route
               path="/login"
               element={
@@ -21,7 +23,6 @@ function App() {
                 </LoginRedirect>
               }
             />
-
             <Route
               path="/:pageId"
               element={
