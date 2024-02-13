@@ -25,8 +25,8 @@ export const Search = ({
   };
 
   const handleSearch = async () => {
-    const results = await fetchData({ query, categoryState });
-    setPosts(results);
+    const searchResult = await fetchData({ query, categoryState });
+    setPosts(searchResult);
     setQuery('');
     setCategoryState('');
     navigate('/1');
@@ -53,24 +53,24 @@ export const Search = ({
     );
 
     const data = await response.json();
-    let filteredData: RecipeType[] = data.contents;
+    let searchResult: RecipeType[] = data.contents;
 
     if (query && categoryState) {
-      filteredData = filteredData.filter(
+      searchResult = searchResult.filter(
         (item: RecipeType) =>
           item.name.includes(query) && item.category.includes(categoryState)
       );
     } else if (!query && categoryState) {
-      filteredData = filteredData.filter((item: RecipeType) =>
+      searchResult = searchResult.filter((item: RecipeType) =>
         item.category.includes(categoryState)
       );
     } else {
-      filteredData = filteredData.filter((item: RecipeType) =>
+      searchResult = searchResult.filter((item: RecipeType) =>
         item.name.includes(query)
       );
     }
 
-    return filteredData;
+    return searchResult;
   };
 
   return (

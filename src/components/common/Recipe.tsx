@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { Search } from '../utility/Serch';
 import { RecipeList } from './RecipeList';
 import { RecipeType } from '../utility/type/RecipeType';
+import { Loading } from '../animetions/Loading';
 
 export const Recipe = () => {
   const [posts, setPosts] = useState<RecipeType[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     fetch(
@@ -21,23 +23,28 @@ export const Recipe = () => {
       .then((res) => res.json())
       .then((data) => {
         setPosts(data.contents);
+        setLoading(false);
       });
   }, []);
 
   return (
     <>
-      <section className="recipe">
-        <div className="recipe__container">
-          <div className="recipe__heading">
-            <h1 className="recipe__title">大倉家のレシピ共有アプリ</h1>
-            <p className="recipe__lead">オンマの飯しか勝たん💛</p>
+      {loading ? (
+        <Loading />
+      ) : (
+        <section className="recipe">
+          <div className="recipe__container">
+            <div className="recipe__heading">
+              <h1 className="recipe__title">大倉家のレシピ共有アプリ</h1>
+              <p className="recipe__lead">オンマの飯しか勝たん💛</p>
+            </div>
+            <div className="recipe__wrapper">
+              <RecipeList posts={posts} />
+              <Search setPosts={setPosts} />
+            </div>
           </div>
-          <div className="recipe__wrapper">
-            <RecipeList posts={posts} />
-            <Search setPosts={setPosts} />
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
     </>
   );
 };

@@ -10,7 +10,7 @@ interface RecipePostsType {
 
 export const RecipeList = ({ posts }: RecipePostsType) => {
   let { pageId } = useParams();
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState<number>(1);
 
   useEffect(() => {
     setCurrentPage(Number(pageId));
