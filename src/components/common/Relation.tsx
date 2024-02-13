@@ -27,7 +27,7 @@ export const Relation = ({
       .then((data) => {
         setPosts(data.contents);
       });
-  }, []);
+  }, [recipeId]);
 
   return (
     <>
