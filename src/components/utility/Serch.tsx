@@ -1,5 +1,5 @@
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { RecipeType } from './type/RecipeType';
 
 export const Search = ({

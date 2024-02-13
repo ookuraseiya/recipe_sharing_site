@@ -1,13 +1,9 @@
-import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { Header } from '../common/Header';
 import { Footer } from '../common/Footer';
+import { ChildrenType } from '../utility/type/ChildrenType';
 
-interface Props {
-  children: ReactNode;
-}
-
-export const FadeIn = (props: Props) => {
+export const FadeIn = (props: ChildrenType) => {
   return (
     <>
       <motion.div
