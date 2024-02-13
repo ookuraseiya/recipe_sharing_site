@@ -8,6 +8,7 @@ typescriptをメインに使用して家族で使えるレシピ共有webアプ�
 
 以下の URL が本番環境に上げたものです。
 
+https://recipe-sharing-site.netlify.app
 
 <br>
 
