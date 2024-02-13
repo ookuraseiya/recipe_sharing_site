@@ -1,6 +1,9 @@
+import { ScrollTop } from '../utility/ScrollTop';
+
 export const Header = () => {
   return (
     <>
+      <ScrollTop />
       <header className="header">
         <div className="header__container">
           <div className="header__list">
