@@ -12,38 +12,16 @@ https://recipe-sharing-site.netlify.app
 
 <br>
 
-# 開発環境
-
-言語
+# 使用技術
 
 - HTML
 - SCSS(CSS)
 - TypeScript
-
-ライブラリ
-
 - React.js
-
-Backend
-
 - Firebase Authentication
-
-DB
-
 - Firebase
-
-エディタ
-
 - Visual Studio Code
-
-ビルドツール
-
 - vite
-
-OS
-
 - Windows
-
-CMS
-
 - MicroCMS
+- Github
