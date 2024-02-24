@@ -13,6 +13,7 @@ export const Login = () => {
     if (email && password) {
       try {
         await signInWithEmailAndPassword(auth, email, password);
+        setLoginError('');
         navigate('/1');
       } catch (error: unknown) {
         if (error instanceof Error) {
@@ -20,7 +21,7 @@ export const Login = () => {
         }
       }
     } else {
-      setLoginError('');
+      setLoginError('メールアドレスとパスワード両方入力してください。');
     }
   };
 
@@ -29,7 +30,9 @@ export const Login = () => {
       <section className="login">
         <div className="login__container">
           <div className="login__error--position">
-            {loginError && <h1 className="login__error">{loginError}</h1>}
+            <h1 className="login__error" data-testid="error-text">
+              {loginError && loginError}
+            </h1>
           </div>
           <form className="login__form" onSubmit={(e) => e.preventDefault()}>
             <h1 className="login__title">ログインフォーム</h1>

@@ -40,3 +40,4 @@ jest.setup.js
 *.njsproj
 *.sln
 *.sw?
+src/memo.txt

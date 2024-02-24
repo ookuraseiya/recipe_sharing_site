@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Main } from './pages/Main';
 import { RecipeDetail } from './pages/RecipeDetail';
-import './css/styles.css';
 import { Login } from './pages/Login';
 import { AuthProvider } from './contexts/AuthProvider';
 import { UnLoginRedirect } from './components/utility/redirect/UnLoginRedirect';

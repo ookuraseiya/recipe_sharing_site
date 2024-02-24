@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Appコンポーネントのテスト Appコンポーネントのスナップショットテスト 1`] = `<DocumentFragment />`;
+
+exports[`Appコンポーネントのテスト Headerページのスナップショットテスト 1`] = `<DocumentFragment />`;
+
+exports[`Footerコンポーネントのテスト Footerページのスナップショットテスト 1`] = `
+<DocumentFragment>
+  <footer
+    class="footer"
+  >
+    <div
+      class="footer__wrapper"
+    >
+      <p
+        class="footer__lead"
+      >
+        Copyright © 2024 Ōkura home recipe sharing site
+      </p>
+    </div>
+  </footer>
+</DocumentFragment>
+`;
+
+exports[`Headerコンポーネントのテスト Headerページのスナップショットテスト 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+  >
+    <div
+      class="header__container"
+    >
+      <div
+        class="header__list"
+      >
+        <img
+          alt=""
+          class="header__logo"
+          src="/images/logo.webp"
+        />
+        <div
+          class="header__button--position"
+        >
+          <button
+            class="header__button"
+          >
+            ログアウト
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+</DocumentFragment>
+`;
+
+exports[`Paginationコンポーネントのテスト Paginationコンポーネントのスナップショットテスト 1`] = `
+<DocumentFragment>
+  <section
+    class="pagination"
+  >
+    <ul
+      class="pagination__list"
+    >
+      <li
+        class="pagination__disabled"
+      >
+        <a
+          class="pagination__href"
+          href="/0"
+        >
+          &lt;
+        </a>
+      </li>
+      <li
+        class="pagination__position"
+      >
+        1 / 10
+      </li>
+      <li
+        class="pagination__link"
+      >
+        <a
+          class="pagination__href"
+          href="/2"
+        >
+          &gt;
+        </a>
+      </li>
+    </ul>
+  </section>
+</DocumentFragment>
+`;
