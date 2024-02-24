@@ -10,13 +10,17 @@ export const Login = () => {
   const [password, setPassword] = useState<string>('');
 
   const handleLogin = async () => {
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate('/1');
-    } catch (error: unknown) {
-      if (error instanceof Error) {
-        setLoginError('メールアドレスかパスワードが違います。');
+    if (email && password) {
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        navigate('/1');
+      } catch (error: unknown) {
+        if (error instanceof Error) {
+          setLoginError('メールアドレスかパスワードが違います。');
+        }
       }
+    } else {
+      setLoginError('');
     }
   };
 
