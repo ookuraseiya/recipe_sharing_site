@@ -27,7 +27,7 @@ https://recipe-sharing-site.netlify.app
 - Firebase Authentication
 - Firebase
 - Visual Studio Code
-- vite
+- Vite
 - Windows
 - MicroCMS
 - Github
