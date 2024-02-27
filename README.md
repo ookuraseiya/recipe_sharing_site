@@ -6,9 +6,15 @@ typescriptをメインに使用して家族で使えるレシピ共有webアプ�
 
 # システム概要
 
-以下の URL が本番環境に上げたものです。詳しはポートフォリオサイトをご覧ください。
+以下の URL が本番環境に上げたものです。
 
 https://recipe-sharing-site.netlify.app
+
+<br>
+
+また詳しくは以下のポートフォリオサイトをご覧ください。
+
+[seiya-portfolio-site.netlify.app](https://seiya-portfolio-site.netlify.app)
 
 <br>
 
