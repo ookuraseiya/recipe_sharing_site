@@ -12,12 +12,18 @@ import App from '../src/App';
 import { Header } from '../src/components/common/Header';
 import { Footer } from '../src/components/common/Footer';
 import { Login } from '../src/pages/Login';
-import fetchMock from 'jest-fetch-mock';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Loading } from '../src/components/animetions/Loading';
 import { Pagination } from '../src/components/utility/Pagination';
-
-fetchMock.enableMocks();
+import { Recipe } from '../src/pages/Recipe';
+import { RecipeList } from '../src/components/common/RecipeList';
+import { Card } from '../src/components/common/Card';
+import { RecipeDetail } from '../src/pages/RecipeDetail';
+import { DummyRecipeData } from './dummyDatas/DummyRecipeData';
+import { DummyRelationData } from './dummyDatas/DummyRelationData';
+import { RecipeListJudge } from '../src/components/utility/RecipeListJudge';
+import { RecipeDetailJudge } from '../src/components/utility/RecipeDetailJudge';
+import { RecipeType } from '../src/components/utility/type/RecipeType';
 
 // Firebaseのモジュールをモック化
 jest.mock('firebase/auth', () => ({
@@ -35,6 +41,10 @@ jest.mock('firebase/auth', () => ({
 
 // scrollTopのモック化
 global.window.scrollTo = jest.fn();
+
+// filter関数をモック化する
+const filterTestFn = jest.fn();
+filterTestFn.mockReturnValueOnce(true).mockReturnValueOnce(false);
 
 // Appコンポーネントのテスト;
 describe('Appコンポーネントのテスト', () => {
@@ -303,5 +313,140 @@ describe('Footerコンポーネントのテスト', () => {
       </BrowserRouter>
     );
     expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+// Recipeコンポーネントのテスト
+describe('Recipeコンポーネントのテスト', () => {
+  const mockResponse = {
+    ok: true,
+    json: jest.fn().mockResolvedValue(DummyRecipeData),
+  };
+  test('Recipeコンポーネントのレンダー&スナップショットテスト', () => {
+    global.fetch = jest.fn().mockResolvedValue(mockResponse);
+    const { asFragment } = render(
+      <BrowserRouter>
+        <Recipe />
+      </BrowserRouter>
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+// RecipeListコンポーネントのテスト
+describe('RecipeListコンポーネントのテスト', () => {
+  test('RecipeListコンポーネントのレンダー&スナップショットテスト', () => {
+    const { asFragment } = render(
+      <BrowserRouter>
+        <RecipeList posts={DummyRecipeData} />
+      </BrowserRouter>
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+// Cardコンポーネントのテスト
+describe('Cardコンポーネントのテスト', () => {
+  test('Cardコンポーネントのレンダー&スナップショットテスト', () => {
+    const { asFragment } = render(
+      <BrowserRouter>
+        <Card posts={DummyRecipeData} firstPost={0} lastPost={9} />
+      </BrowserRouter>
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  test('Cardコンポーネントでダミーデータのレシピの名前やカテゴリが表示されているかテスト', () => {
+    render(
+      <BrowserRouter>
+        <Card posts={DummyRecipeData} firstPost={0} lastPost={9} />
+      </BrowserRouter>
+    );
+
+    expect(screen.getByText('パスタ')).toBeInTheDocument();
+    expect(screen.getByText('洋食')).toBeInTheDocument();
+    expect(screen.getByText('味噌汁')).toBeInTheDocument();
+    expect(screen.getByText('和食')).toBeInTheDocument();
+    expect(screen.getByText('チャーハン')).toBeInTheDocument();
+    expect(screen.getByText('中華料理')).toBeInTheDocument();
+    expect(screen.getByText('キムチ')).toBeInTheDocument();
+    expect(screen.getByText('韓国料理')).toBeInTheDocument();
+    expect(screen.getByText('ガパオライス')).toBeInTheDocument();
+    expect(screen.getByText('その他')).toBeInTheDocument();
+  });
+
+  test('CardコンポーネントでRelationが表示されているかテスト', () => {
+    render(
+      <BrowserRouter>
+        <Card
+          posts={DummyRelationData}
+          recipeId={'r1'}
+          relationCategory={'洋食'}
+        />
+      </BrowserRouter>
+    );
+
+    expect(screen.queryByText('パスタ')).not.toBeInTheDocument();
+    expect(screen.getByText('ピザ')).toBeInTheDocument();
+    expect(screen.getByText('パン')).toBeInTheDocument();
+    expect(screen.getByText('パンケーキ')).toBeInTheDocument();
+  });
+});
+
+// RecipeDetailコンポーネントのテスト
+describe('RecipeDetailコンポーネントのテスト', () => {
+  const mockResponse = {
+    ok: true,
+    json: jest.fn().mockResolvedValue(DummyRecipeData),
+  };
+
+  test('RecipeDetailコンポーネントのレンダー&スナップショットテスト', () => {
+    global.fetch = jest.fn().mockResolvedValue(mockResponse);
+    const { asFragment } = render(
+      <BrowserRouter>
+        <RecipeDetail />
+      </BrowserRouter>
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+// RecipeListJudge関数のテスト
+describe('RecipeListJudge判定のテスト', () => {
+  test('RecipeListJudgeのtrue判定', () => {
+    const id = 2;
+    const paginationNumber = 3;
+    expect(RecipeListJudge(id, paginationNumber)).toBe(true);
+  });
+
+  test('idが0の時（false判定）', () => {
+    const id = 0;
+    const paginationNumber = 3;
+    expect(RecipeListJudge(id, paginationNumber)).toBe(false);
+  });
+
+  test('idがpaginationNumberより値が大きい時（false判定）', () => {
+    const id = 4;
+    const paginationNumber = 3;
+    expect(RecipeListJudge(id, paginationNumber)).toBe(false);
+  });
+
+  test('idがNumber以外の値の時（false判定）', () => {
+    const id = 'abc';
+    const paginationNumber = 3;
+    expect(RecipeListJudge(id, paginationNumber)).toBe(false);
+  });
+});
+
+// RecipeDetailJudge関数のテスト
+describe('RecipeDetailJudge判定のテスト', () => {
+  test('投稿があるとき（true判定）', () => {
+    expect(RecipeDetailJudge(DummyRecipeData)).toBe(true);
+  });
+
+  test('投稿がないとき（false判定）', () => {
+    const NullPosts: RecipeType[] = [];
+    expect(RecipeDetailJudge(NullPosts)).toBe(false);
   });
 });

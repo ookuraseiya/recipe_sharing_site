@@ -6,6 +6,7 @@ import { RecipeType } from '../components/utility/type/RecipeType';
 import { Loading } from '../components/animetions/Loading';
 import { FadeIn } from '../components/animetions/FadeIn';
 import { NotFoundPage } from './404';
+import { RecipeDetailJudge } from '../components/utility/RecipeDetailJudge';
 
 export const RecipeDetail = () => {
   const [posts, setPosts] = useState<RecipeType[]>([]);
@@ -28,28 +29,26 @@ export const RecipeDetail = () => {
       .then((res) => res.json())
       .then((data) => {
         setPosts(
-          data.contents.filter(
+          data.contents?.filter(
             (data: { id: string }) => data.id === String(recipeId)
-          )
+          ) || []
         );
         setRelationPosts(data.contents);
         setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        setPosts([]);
+        setRelationPosts([]);
+        setLoading(false);
       });
   }, [recipeId]);
-
-  const judge = (posts: RecipeType[]) => {
-    if (posts.length === 0) {
-      return false;
-    } else {
-      return true;
-    }
-  };
 
   return (
     <>
       {loading ? (
         <Loading />
-      ) : judge(posts) ? (
+      ) : RecipeDetailJudge(posts) ? (
         <>
           <FadeIn>
             {posts.map((post) => (
@@ -63,8 +62,8 @@ export const RecipeDetail = () => {
                       <div className="recipeDetail__item">
                         <img
                           className="recipeDetail__item--image"
-                          src="https://placekitten.com/300/150"
-                          alt=""
+                          src={post.image.url}
+                          alt="Recipe Image"
                         />
                         <h1 className="recipeDetail__item--title">
                           {post.name}
@@ -116,7 +115,11 @@ export const RecipeDetail = () => {
           </FadeIn>
         </>
       ) : (
-        <NotFoundPage />
+        <>
+          <FadeIn>
+            <NotFoundPage />
+          </FadeIn>
+        </>
       )}
     </>
   );

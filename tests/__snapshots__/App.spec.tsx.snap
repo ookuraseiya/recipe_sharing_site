@@ -4,6 +4,276 @@ exports[`Appコンポーネントのテスト Appコンポーネントのスナ�
 
 exports[`Appコンポーネントのテスト Headerページのスナップショットテスト 1`] = `<DocumentFragment />`;
 
+exports[`Cardコンポーネントのテスト Cardコンポーネントのレンダー&スナップショットテスト 1`] = `
+<DocumentFragment>
+  <a
+    class="card"
+    href="/recipeDetail/r1"
+  >
+    <li
+      class="card__layout"
+    >
+      <img
+        alt="Card Image"
+        class="card__image"
+        src="https://example.com/images/curry-rice.jpg"
+      />
+      <div
+        class="card__content"
+      >
+        <p
+          class="card__category"
+        >
+          カテゴリ:
+          <span
+            class="card__category--span"
+          >
+            洋食
+          </span>
+        </p>
+        <p
+          class="card__postTime"
+        >
+          投稿時間:
+          <span
+            class="card__postTime--span"
+          >
+            2024/02/26 00:30
+          </span>
+        </p>
+        <p
+          class="card__duration"
+        >
+          所要時間:
+          <span
+            class="card__duration--span"
+          >
+            40分
+          </span>
+        </p>
+        <h1
+          class="card__title"
+        >
+          パスタ
+        </h1>
+      </div>
+    </li>
+  </a>
+  <a
+    class="card"
+    href="/recipeDetail/r2"
+  >
+    <li
+      class="card__layout"
+    >
+      <img
+        alt="Card Image"
+        class="card__image"
+        src="https://example.com/images/curry-rice.jpg"
+      />
+      <div
+        class="card__content"
+      >
+        <p
+          class="card__category"
+        >
+          カテゴリ:
+          <span
+            class="card__category--span"
+          >
+            和食
+          </span>
+        </p>
+        <p
+          class="card__postTime"
+        >
+          投稿時間:
+          <span
+            class="card__postTime--span"
+          >
+            2024/02/26 00:30
+          </span>
+        </p>
+        <p
+          class="card__duration"
+        >
+          所要時間:
+          <span
+            class="card__duration--span"
+          >
+            40分
+          </span>
+        </p>
+        <h1
+          class="card__title"
+        >
+          味噌汁
+        </h1>
+      </div>
+    </li>
+  </a>
+  <a
+    class="card"
+    href="/recipeDetail/r3"
+  >
+    <li
+      class="card__layout"
+    >
+      <img
+        alt="Card Image"
+        class="card__image"
+        src="https://example.com/images/curry-rice.jpg"
+      />
+      <div
+        class="card__content"
+      >
+        <p
+          class="card__category"
+        >
+          カテゴリ:
+          <span
+            class="card__category--span"
+          >
+            中華料理
+          </span>
+        </p>
+        <p
+          class="card__postTime"
+        >
+          投稿時間:
+          <span
+            class="card__postTime--span"
+          >
+            2024/02/26 00:30
+          </span>
+        </p>
+        <p
+          class="card__duration"
+        >
+          所要時間:
+          <span
+            class="card__duration--span"
+          >
+            40分
+          </span>
+        </p>
+        <h1
+          class="card__title"
+        >
+          チャーハン
+        </h1>
+      </div>
+    </li>
+  </a>
+  <a
+    class="card"
+    href="/recipeDetail/r4"
+  >
+    <li
+      class="card__layout"
+    >
+      <img
+        alt="Card Image"
+        class="card__image"
+        src="https://example.com/images/curry-rice.jpg"
+      />
+      <div
+        class="card__content"
+      >
+        <p
+          class="card__category"
+        >
+          カテゴリ:
+          <span
+            class="card__category--span"
+          >
+            韓国料理
+          </span>
+        </p>
+        <p
+          class="card__postTime"
+        >
+          投稿時間:
+          <span
+            class="card__postTime--span"
+          >
+            2024/02/26 00:30
+          </span>
+        </p>
+        <p
+          class="card__duration"
+        >
+          所要時間:
+          <span
+            class="card__duration--span"
+          >
+            40分
+          </span>
+        </p>
+        <h1
+          class="card__title"
+        >
+          キムチ
+        </h1>
+      </div>
+    </li>
+  </a>
+  <a
+    class="card"
+    href="/recipeDetail/r5"
+  >
+    <li
+      class="card__layout"
+    >
+      <img
+        alt="Card Image"
+        class="card__image"
+        src="https://example.com/images/curry-rice.jpg"
+      />
+      <div
+        class="card__content"
+      >
+        <p
+          class="card__category"
+        >
+          カテゴリ:
+          <span
+            class="card__category--span"
+          >
+            その他
+          </span>
+        </p>
+        <p
+          class="card__postTime"
+        >
+          投稿時間:
+          <span
+            class="card__postTime--span"
+          >
+            2024/02/26 00:30
+          </span>
+        </p>
+        <p
+          class="card__duration"
+        >
+          所要時間:
+          <span
+            class="card__duration--span"
+          >
+            40分
+          </span>
+        </p>
+        <h1
+          class="card__title"
+        >
+          ガパオライス
+        </h1>
+      </div>
+    </li>
+  </a>
+</DocumentFragment>
+`;
+
 exports[`Footerコンポーネントのテスト Footerページのスナップショットテスト 1`] = `
 <DocumentFragment>
   <footer
@@ -88,5 +358,909 @@ exports[`Paginationコンポーネントのテスト Paginationコンポーネ�
       </li>
     </ul>
   </section>
+</DocumentFragment>
+`;
+
+exports[`RecipeDetailコンポーネントのテスト RecipeDetailコンポーネントのレンダー&スナップショットテスト 1`] = `
+<DocumentFragment>
+  <div
+    class="loading"
+  >
+    <div
+      style="fill: #5a320a; height: 64px; width: 64px;"
+    >
+      <svg
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(45 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.125s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(90 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.25s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(135 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.375s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(225 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.625s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(270 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.75s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(315 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.875s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+
+      </svg>
+      
+
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`RecipeDetailコンポーネントのテスト RecipeDetailコンポーネントのレンダーテスト 1`] = `
+<DocumentFragment>
+  <div
+    class="loading"
+  >
+    <div
+      style="fill: #5a320a; height: 64px; width: 64px;"
+    >
+      <svg
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(45 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.125s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(90 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.25s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(135 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.375s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(225 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.625s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(270 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.75s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(315 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.875s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+
+      </svg>
+      
+
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`RecipeListコンポーネントのテスト RecipeListコンポーネントのレンダー&スナップショットテスト 1`] = `
+<DocumentFragment>
+  <div
+    class="recipe__list"
+  >
+    <h1
+      class="recipe__list--error"
+    >
+      レシピがありません。
+    </h1>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`RecipeListコンポーネントのテスト RecipeListコンポーネントのレンダーテスト 1`] = `
+<DocumentFragment>
+  <div
+    class="recipe__list"
+  >
+    <h1
+      class="recipe__list--error"
+    >
+      レシピがありません。
+    </h1>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Recipeコンポーネントのテスト Recipeコンポーネントのレンダー&スナップショットテスト 1`] = `
+<DocumentFragment>
+  <div
+    class="loading"
+  >
+    <div
+      style="fill: #5a320a; height: 64px; width: 64px;"
+    >
+      <svg
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(45 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.125s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(90 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.25s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(135 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.375s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(225 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.625s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(270 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.75s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(315 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.875s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+
+      </svg>
+      
+
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Recipeコンポーネントのテスト Recipeコンポーネントのレンダーテスト 1`] = `
+<DocumentFragment>
+  <div
+    class="loading"
+  >
+    <div
+      style="fill: #5a320a; height: 64px; width: 64px;"
+    >
+      <svg
+        viewBox="0 0 32 32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(45 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.125s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(90 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.25s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(135 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.375s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(225 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.625s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(270 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.75s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(315 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.875s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+  
+        <circle
+          cx="16"
+          cy="3"
+          r="0"
+          transform="rotate(180 16 16)"
+        >
+          
+    
+          <animate
+            attributeName="r"
+            begin="0.5s"
+            calcMode="spline"
+            dur="1s"
+            keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+            repeatCount="indefinite"
+            values="0;3;0;0"
+          />
+          
+  
+        </circle>
+        
+
+      </svg>
+      
+
+    </div>
+  </div>
 </DocumentFragment>
 `;

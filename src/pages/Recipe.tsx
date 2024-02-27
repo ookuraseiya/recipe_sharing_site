@@ -25,6 +25,11 @@ export const Recipe = () => {
       .then((data) => {
         setPosts(data.contents);
         setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        setPosts([]);
+        setLoading(false);
       });
   }, []);
 

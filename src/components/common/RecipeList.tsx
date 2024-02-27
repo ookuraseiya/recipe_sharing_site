@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Card } from './Card';
 import { Pagination } from '../utility/Pagination';
 import { RecipeType } from '../utility/type/RecipeType';
+import { RecipeListJudge } from '../utility/RecipeListJudge';
 
 interface RecipePostsType {
   posts: RecipeType[];
@@ -22,22 +23,10 @@ export const RecipeList = ({ posts }: RecipePostsType) => {
   const totalPosts: number = posts.length;
   const paginationNumber: number = Math.ceil(totalPosts / PER_PAGE);
 
-  const judge = () => {
-    if (
-      1 > Number(pageId) ||
-      paginationNumber < Number(pageId) ||
-      isNaN(Number(pageId))
-    ) {
-      return false;
-    } else {
-      return true;
-    }
-  };
-
   return (
     <>
       <div className="recipe__list">
-        {judge() ? (
+        {RecipeListJudge(Number(pageId), paginationNumber) ? (
           <>
             <ul className="recipe__list--wrapper">
               <Card posts={posts} firstPost={firstPost} lastPost={lastPost} />
