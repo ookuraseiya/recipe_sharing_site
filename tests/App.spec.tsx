@@ -24,6 +24,8 @@ import { DummyRelationData } from './dummyDatas/DummyRelationData';
 import { RecipeListJudge } from '../src/components/utility/RecipeListJudge';
 import { RecipeDetailJudge } from '../src/components/utility/RecipeDetailJudge';
 import { RecipeType } from '../src/components/utility/type/RecipeType';
+import { Search } from '../src/components/utility/search/Search';
+import { InitialRedirect } from '../src/components/utility/redirect/InitialRedirect';
 
 // Firebaseのモジュールをモック化
 jest.mock('firebase/auth', () => ({
@@ -45,6 +47,13 @@ global.window.scrollTo = jest.fn();
 // filter関数をモック化する
 const filterTestFn = jest.fn();
 filterTestFn.mockReturnValueOnce(true).mockReturnValueOnce(false);
+
+// useNavigateをモック化
+const mockedUsedNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+  ...(jest.requireActual('react-router-dom') as any),
+  useNavigate: () => mockedUsedNavigate,
+}));
 
 // Appコンポーネントのテスト;
 describe('Appコンポーネントのテスト', () => {
@@ -409,6 +418,36 @@ describe('RecipeDetailコンポーネントのテスト', () => {
     );
 
     expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+// Searchコンポーネントのテスト
+describe('Searchコンポーネントのテスト', () => {
+  const mockResponse = {
+    ok: true,
+    json: jest.fn().mockResolvedValue(DummyRecipeData),
+  };
+
+  test('Searchコンポーネントのレンダーテスト', () => {
+    global.fetch = jest.fn().mockResolvedValue(mockResponse);
+    render(
+      <BrowserRouter>
+        <Search setPosts={(_DummyRecipeData: RecipeType[]) => {}} />
+      </BrowserRouter>
+    );
+  });
+});
+
+// InitialRedirectコンポーネントのテスト
+describe('InitialRedirectコンポーネントのテスト', () => {
+  test('"/1"にリダイレクトするテスト', () => {
+    render(
+      <BrowserRouter>
+        <InitialRedirect />
+      </BrowserRouter>
+    );
+
+    expect(mockedUsedNavigate).toHaveBeenCalledWith('/1');
   });
 });
 

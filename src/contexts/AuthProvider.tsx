@@ -20,7 +20,7 @@ export function useAuthContext(): AuthContextType {
 
 export function AuthProvider(props: ChildrenType) {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const value = {
     user,
@@ -30,16 +30,14 @@ export function AuthProvider(props: ChildrenType) {
   useEffect(() => {
     const unsubscribed = auth.onAuthStateChanged((user) => {
       setUser(user);
-      setLoading(false);
+      setLoading(true);
     });
-    return () => {
-      unsubscribed();
-    };
+    return unsubscribed;
   }, []);
 
   return (
     <AuthContext.Provider value={value}>
-      {!loading && props.children}
+      {loading && props.children}
     </AuthContext.Provider>
   );
 }

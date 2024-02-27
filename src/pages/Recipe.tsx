@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Search } from '../components/utility/Serch';
+import { Search } from '../components/utility/search/Search';
 import { RecipeList } from '../components/common/RecipeList';
 import { RecipeType } from '../components/utility/type/RecipeType';
 import { Loading } from '../components/animetions/Loading';
